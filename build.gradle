@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'eclipse'
+    id 'org.springframework.boot' version '2.2.4.RELEASE'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'io.undertow:undertow-core:2.0.1.Final'
+	implementation 'io.undertow:undertow-servlet:2.0.1.Final'
+	implementation 'io.undertow:undertow-websockets-jsr:2.0.1.Final'
+}
+
+mainClassName = 'com.kratonsolution.tools.thermalbridge.EntryPoint'
+
+bootJar{
+	
+	manifest {
+		attributes 'Start-Class': 'com.kratonsolution.tools.thermalbridge.EntryPoint'
+	}
+}
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
