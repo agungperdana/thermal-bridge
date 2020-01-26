@@ -1,0 +1,11 @@
+{
+	"host" : "localhost",
+	"thermalPrinter" : {
+		"name" : "",
+		"copy" : "1"
+	},
+	"nonThermalPrinter" : {
+		"name" : "",
+		"copy" : "1"
+	}
+}

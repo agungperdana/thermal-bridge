@@ -29,5 +29,5 @@ bootJar{
 }
 
 javafx {
-    modules = [ 'javafx.controls', 'javafx.fxml' ]
+    modules = [ 'javafx.web']
 }
