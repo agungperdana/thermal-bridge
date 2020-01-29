@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "3329c17f-7b27-4bd1-bfad-6685194aa389",
+		"name": "Thermal-Bridge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Thermal-Bridge-test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "PRINTER_TYPE",
+						"value": "THERMAL",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<!DOCTYPE html>\n<html lang=\"en\" class=\"no-js\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.thymeleaf.org\">\n  <head>\n    <title>COSIN APP V-1.0</title>\n    <link rel=\"stylesheet\" data-th-href=\"@{/photon/dist/css/photon.min.css}\"/>\n  </head>\n  <body>\n    <div class=\"window\">\n\n      <header class=\"toolbar toolbar-header\">\n        <h1 class=\"title\">APLIKASI CERDAS DIAGNOSA KERUSAKAN PERANGKAT ELEKTRONIK</h1>\n      </header>\n\n      <!-- Your app's content goes inside .window-content -->\n      <div class=\"window-content\">\n        <div class=\"pane-group\">\n          <div class=\"pane pane-sm sidebar\">\n            <nav class=\"nav-group\">\n              <h5 class=\"nav-group-title\">Navigasi Pengguna</h5>\n              <span class=\"nav-group-item active\">\n                <span class=\"icon icon-home\"></span>\n                Beranda\n              </span>\n              <span class=\"nav-group-item\">\n                <span class=\"icon icon-light-up\"></span>\n                <a style=\"cursor: pointer;\" data-th-href=\"@{/prepare-diagnosa}\">Diagnosa</a>\n              </span>\n              <span class=\"nav-group-item\">\n                <span class=\"icon icon-download\"></span>\n                <a style=\"cursor: pointer;\" data-th-href=\"@{/prepare-bantuan}\">Bantuan</a>\n              </span>\n            </nav>\n          </div>\n\n          <div class=\"pane\">\n\t\t\t<div style=\"text-align: center;\">\n\t\t\t\t</br></br>\n\t\t\t\tSelamat datang.</br>\n\t\t\t\tAplikasi sistem pakar diagnosa kerusakan perangkat elektronik versi 1.0</br></br>\n\t\t\t\t<a style=\"cursor: pointer;\" data-th-href=\"@{/prepare-diagnosa}\">Mulai Diagnosa</a>\n\t\t\t</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </body>\n</html>"
+				},
+				"url": {
+					"raw": "127.0.0.1:8080",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

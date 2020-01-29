@@ -3,7 +3,6 @@
  */
 package com.kratonsolution.tools.thermalbridge.service;
 
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
@@ -22,15 +21,12 @@ public class ConfigService {
 
 	public Config load() {
 
-		System.out.println(new File(".").getAbsolutePath());
-		
 		Config config = null;
 
 		try {
 
 			config = gson.fromJson(new FileReader(FILE_NAME), Config.class);			
 		} catch (Exception e) {
-			e.printStackTrace();
 		}
 
 		if(config == null) {

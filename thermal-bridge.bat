@@ -1,0 +1,1 @@
+java -jar thermal-bridge.jar

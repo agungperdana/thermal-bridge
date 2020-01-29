@@ -34,11 +34,14 @@ public class Handler implements HttpHandler {
 		@Override
 		public void handle(HttpServerExchange exchange, byte[] message) {
 			
-			if(exchange.getRequestHeaders().get("PRINTER_TYPE").contains("THERMAL")) {
-				printThermal(message);
-			}
-			else {
-				printStandard(message);
+			if(exchange.getRequestHeaders().contains("PRINTER_TYPE")) {
+				
+				if(exchange.getRequestHeaders().get("PRINTER_TYPE").contains("THERMAL")) {
+					printThermal(message);
+				}
+				else {
+					printStandard(message);
+				}
 			}
 		}
 
